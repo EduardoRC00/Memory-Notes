@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block title %}Puntaje{% endblock %}
+
+{% block content %}
+    <h2>Puntaje</h2>
+    {{puntaje}}
+    <a href="{{ url_for('inicio') }}">Inicio</a>
+    <a href="{{ url_for('nota_aleatoria') }}">Regresar</a>
+{% endblock %}

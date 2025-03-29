@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block title %}Agregar nota{% endblock %}
+
+{% block content %}
+    <h1>Agregar nueva nota</h1>
+    <div class="formulario">
+        <form action="{{url_for('agregar_nota')}}" method="post">
+            <div class="add-ingles"><label for="ingles">Nota en ingles</label></div>
+            <div class="add-ingles"><input type="text" name="ingles" id="ingles" required></div>
+            
+            <div class="add-espanol"><label for="espanol">Nota en español</label></div>
+            <div class="add-espanol"><input type="text" name="espanol" id="espanol" required></div>
+
+            <div class="btn-agregar"><button type="submit">Guardar</button></div>
+        </form>
+    </div>
+    <hr>
+    <a href="{{url_for('inicio')}}">Regresar</a>
+{% endblock %}

@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% block title %}Memory notes{% endblock %}
+
+{% block content %}
+    <h1>Memory notes</h1>
+    <hr>
+
+    <div class="contenedor">
+        <!--botones de eleccion-->
+        <div class="btns">
+            <aside>
+                <div class="btns-item"><a href="{{ url_for('agregar_nota') }}">Agregar nota</a></div>
+                <div class="btns-item"><a href="{{ url_for('nota_aleatoria') }}">Repasar notas</a></div>
+                <div class="btns-item"><a href="{{ url_for('nota_por_fecha') }}">Buscar nota por fecha</a></div>
+                <div class="btns-item"><a href="">Buscar coincidencias por palabra</a></div>
+            </aside>
+        </div>
+        {% if data %}
+        <div class="encabezado">
+            <div class="encabezado-item">ID</div>
+            <div class="encabezado-item">Ingles</div>
+            <div class="encabezado-item">Español</div>
+            <div class="encabezado-item">Fecha</div>
+            <div class="encabezado-item">Acciones</div>
+        </div>
+        {% for nota in data %}
+        <div class="fila">
+            <div class="fila-item">{{nota.id}}</div>
+            <div class="fila-item">{{nota.ingles}}</div>
+            <div class="fila-item">{{nota.espanol}}</div>
+            <div class="fila-item">{{nota.fecha}}</div>
+            <div class="fila-item">
+                <a href="{{url_for('eliminar_nota', id = nota.id)}}">Eliminar</a>
+                <a href="{{url_for('editar_nota', id = nota.id)}}">Editar nota</a>
+            </div>
+        </div>
+        {% endfor %}
+    {% else %}
+    <h2>Sin notas</h2>
+    {% endif %}
+    </div>
+
+{% endblock %}

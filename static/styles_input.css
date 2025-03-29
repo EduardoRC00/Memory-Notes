@@ -1,0 +1,32 @@
+.formulario{
+    background-color: #d4efdf;
+    border: none black 2px;
+    margin: 30px;
+    padding: 20px 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 8px #0006;
+}
+input{
+    border: solid #22c7 2px;
+    border-radius: 8px;
+    /*outline none quita el contorno del input al clicar*/
+    outline: none; 
+    /*una transicion de 3 segundos a todo el input  ease-in-out aplica los cambios de forma suave*/
+    transition: all 0.3s ease-in-out;
+}
+input:focus{
+    border-color: #e065;
+    box-shadow: 0px 0px 6px #e00;
+}
+.add-ingles,
+.add-espanol{
+    margin: 8px 0px;
+}
+.btn-agregar,
+.btn-actualizar{
+    margin-top: 16px;
+}
+.edit-ingles,
+.edit-espanol{
+    margin: 8px 0px;
+}

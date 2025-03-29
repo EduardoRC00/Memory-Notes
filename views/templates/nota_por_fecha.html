@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% block title %}Buscar nota por fecha{% endblock %}
+
+{% block content %}
+    <h1>Buscar notas por fecha</h1>
+
+    <div class="formulario">
+        {% if data_fechas %}
+            {% for fecha in data_fechas[0] %}
+                <div id="btn" onclick="mostrar();">{{ fecha }}</div>
+                <div id="contenido-fechas" class="contenido-fechas">
+                    <div id="btn" onclick="ocultar();">ocultar</div>
+                    <div class="fila">
+                        <div class="fila-item">{{fecha}}</div>
+                    </div>
+                </div>
+            {% endfor %}
+        {% else %}
+        <h2>
+            Sin notas
+        </h2>
+        {% endif %}
+    </div>
+    <a href="{{ url_for('inicio') }}">Regresar</a>
+    
+    {# obteniendo por el id, le decimos que cambiaremos el estilo al id dado #}
+    <script>
+        function mostrar(){
+            document.getElementById('contenido-fechas').style.display = 'block';
+        }
+        function ocultar(){
+            document.getElementById('contenido-fechas').style.display = 'none';
+        }
+
+    </script>
+{% endblock %}
