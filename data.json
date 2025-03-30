@@ -19,7 +19,7 @@
     },
     {
         "id": "81c3c44f-31b7-4835-a743-653d6fad661b",
-        "ingles": "ok",
+        "ingles": "okay",
         "espanol": "esta bien",
         "fecha": "2025-03-21"
     },
@@ -52,5 +52,17 @@
         "ingles": "dont ever do that again",
         "espanol": "no vuelvas a hacerlo",
         "fecha": "2025-03-28"
+    },
+    {
+        "id": "4586af88-7dd6-464c-82c1-12cb39c6872e",
+        "ingles": "just chillin",
+        "espanol": "solo pasando el tiempo",
+        "fecha": "2025-03-30"
+    },
+    {
+        "id": "fe7f0231-82d5-4335-9c90-0b8b9ce918fd",
+        "ingles": "such as life",
+        "espanol": "asi es la vida",
+        "fecha": "2025-03-30"
     }
 ]

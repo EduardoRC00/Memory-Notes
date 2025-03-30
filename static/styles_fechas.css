@@ -1,0 +1,45 @@
+.contenedor-fechas{
+    width: 70%;
+    text-align: center;
+    background-color: #d4efdf;
+    border: none black 2px;
+    margin: 30px;
+    padding: 20px 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 8px #0006;
+}
+.encabezado-fechas{
+    width: 100%;
+    color: #fff;
+    font-weight: bold; /*para dar grosor a la letra*/
+    font-size: 16px;
+    background-color: #0d5;
+    border-radius: 8px;
+    padding: 10px 0;
+    box-shadow: 0px 0px 6px #0006;
+    margin: 10px 0;
+    margin-top: 20px;
+    display: grid; /*para manitular los div*/
+    grid-template-columns: 34% 34% 32%; /*creamos columnas (divs) y le decimos cuanto ocupara cada una*/
+}
+.encabezado-fecha{
+    flex: 1; /*para que los items (cada div) se expandan y ocupen todo el espacio disponible*/
+}
+.fila-fechas{
+    background-color: #eee9;
+    border-radius: 8px;
+    padding: 10px 0;
+    box-shadow: 0px 0px 8px #0006;
+    margin: 8px 0;
+    font-size: 13px; /*tamaño letra*/
+    display: grid; /*para usar grid template*/
+    grid-template-columns: 34% 34% 32%; /*creamos columnas (divs) y le decimos cuanto ocupara cada una*/
+}
+.fila-fecha{
+    flex: 1; /*para que los items (cada div) se expandan y ocupen todo el espacio disponible*/
+}
+.fecha{
+    font-size: large;
+    font-weight: bold;
+    letter-spacing: 2px;
+}

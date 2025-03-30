@@ -1,6 +1,6 @@
 from flask import Flask, render_template, redirect, request, url_for
 import data as d
-from data_fechas import leer_fechas
+import data_fechas as f
 
 app = Flask(__name__,template_folder='views/templates')
 
@@ -15,6 +15,7 @@ def agregar_nota():
         ingles = request.form['ingles']
         espanol = request.form['espanol']
         d.agregar_nota(ingles, espanol)
+        f.estructura()
         return redirect(url_for('inicio'))
     return render_template('agregar_nota.html')
 
@@ -53,12 +54,13 @@ def editar_nota(id):
             "fecha": nota['fecha']
         }
         d.actualizar_nota(nota_actualizada)
+        f.estructura()
         return redirect(url_for('inicio'))
     return render_template('editar_nota.html', nota = nota)
 
 @app.route('/nota-por-fecha')
 def nota_por_fecha():
-    data_fechas = leer_fechas()
+    data_fechas = f.leer_fechas()
     return render_template('nota_por_fecha.html', data_fechas = data_fechas)
 
 if __name__ == '__main__':

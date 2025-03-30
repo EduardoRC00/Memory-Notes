@@ -2,17 +2,28 @@
 {% block title %}Buscar nota por fecha{% endblock %}
 
 {% block content %}
-    <h1>Buscar notas por fechasssss</h1>
+    <h1>Buscar notas por fecha</h1>
+    <a href="{{ url_for('inicio') }}">Regresar</a>
 
-    <div class="formulario">
+    <div class="contenedor-fechas">
         {% if data_fechas %}
-            {% for fecha in data_fechas[0] %}
-                <div id="btn" onclick="mostrar();">{{ fecha }}</div>
-                <div id="contenido-fechas" class="contenido-fechas">
-                    <div id="btn" onclick="ocultar();">ocultar</div>
-                    <div class="fila">
-                        <div class="fila-item">{{fecha}}</div>
+            {% for fecha,clave in data_fechas[0].items() %}
+                <div class="fecha">{{ fecha }}</div>
+                <div class="contenido-fechas">
+
+                    <div class="encabezado-fechas">
+                        <div class="encabezado-fecha">ID</div>
+                        <div class="encabezado-fecha">Ingles</div>
+                        <div class="encabezado-fecha">Español</div>
                     </div>
+
+                    {% for elemento in clave %}
+                    <div class="fila-fechas">
+                        <div class="fila-fecha">{{ elemento.get('id') }}</div>
+                        <div class="fila-fecha">{{ elemento.get('ingles') }}</div>
+                        <div class="fila-fecha">{{ elemento.get('espanol') }}</div>
+                    </div>
+                    {% endfor %}
                 </div>
             {% endfor %}
         {% else %}
@@ -21,16 +32,5 @@
         </h2>
         {% endif %}
     </div>
-    <a href="{{ url_for('inicio') }}">Regresar</a>
-    
-    {# obteniendo por el id, le decimos que cambiaremos el estilo al id dado #}
-    <script>
-        function mostrar(){
-            document.getElementById('contenido-fechas').style.display = 'block';
-        }
-        function ocultar(){
-            document.getElementById('contenido-fechas').style.display = 'none';
-        }
-
-    </script>
+        
 {% endblock %}

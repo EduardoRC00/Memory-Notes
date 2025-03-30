@@ -17,10 +17,6 @@ def guardar_fechas(data):
     except Exception as e:
         print(f'{e}')
 
-def crear_diccionario():
-    diccionario_fechas = {
-    }
-    return diccionario_fechas
 
 def obtener_fechas():
     data = leer_datos()
@@ -36,6 +32,11 @@ def buscar_nota_por_fecha(fecha):
         return nota
     print(f"No se encontraron notas con esa fecha: {fecha}")
 
+def crear_diccionario():
+    diccionario_fechas = {
+    }
+    return diccionario_fechas
+
 def estructura():
     data_fechas = []
     diccionario_fechas = crear_diccionario()
@@ -44,4 +45,4 @@ def estructura():
         diccionario_fechas[fecha] = buscar_nota_por_fecha(fecha)
     data_fechas.append(diccionario_fechas)
     guardar_fechas(data_fechas)
-estructura()
+# estructura()

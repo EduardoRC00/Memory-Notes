@@ -1,4 +1,4 @@
-
+/*-----------PARA TOODOS LOS HTML*/
 *{
     /*quitar las lineas de las redirecciones*/
     text-decoration: none;
@@ -9,6 +9,7 @@ body{
     place-items: center; /*centra el div :)*/
     background-color: #f4f4f4;
     letter-spacing: 0.5px;
+    background: url(/static/alessio-soggetti-gdE-5Oui1Y0-unsplash.jpg) center / cover fixed;
 }
 h1{
     font-size: 32px;
@@ -16,11 +17,15 @@ h1{
     text-shadow: 0px 0px 5px #0009;
     letter-spacing: 2px;
 }
-.contenedor{
+/*PARA TODOS LOS HTML----------*/
+.contenedor-index{
     text-align: center;
     width: 70%;
 }
-
+/*color de letra del href*/
+.link{
+    color: #fff;
+}
 .btns{
     display: grid;
     font-weight: bold;
@@ -30,20 +35,23 @@ h1{
 .btns-item{
     background-color: #6e5d;
     padding: 6px 10px;
-    margin: 0px 10px;
+    margin: 5px 10px;
     border-radius: 6px;
     box-shadow: 0px 0px 8px #0006;
     display: inline-block;
+    width: 200px;
 }
+
 /*hover realiza algo cuando ponemos el cursor encima*/
 .btns-item:hover{
+    color: #000;
     /*en este caso cambia de color el boton*/
     background-color: #fefefe;
-    color: #000;
     /*el cambio se aplica en 0.3 segundos de forma suave*/
     transition: all 0.3s ease-in-out;
+    
 }
-.encabezado{
+.encabezado-index{
     width: 100%;
     color: #fff;
     font-weight: bold; /*para dar grosor a la letra*/
@@ -55,42 +63,25 @@ h1{
     margin: 10px 0;
     margin-top: 20px;
     display: grid; /*para manitular los div*/
-    grid-template-columns: 23% 27% 25% 8% 17%; /*creamos columnas (divs) y le decimos cuanto ocupara cada una*/
+    grid-template-columns: 24% 27% 24% 22%; /*creamos columnas (divs) y le decimos cuanto ocupara cada una*/
 }
 .encabezado-item{
     flex: 1; /*para que los items (cada div) se expandan y ocupen todo el espacio disponible*/
 }
-.fila{
+.fila-index{
     width: 100%; /*para que ocupe todo el ancho disponible de su padre*/
-    background-color: #eee9;
+    background-color: #eeea;
     border-radius: 8px;
-    padding: 10px 0;
+    padding: 10px 3px;
     box-shadow: 0px 0px 8px #0006;
     margin: 8px 0;
     font-size: 13px; /*tamaño letra*/
     display: grid; /*para usar grid template*/
-    grid-template-columns: 23% 27% 25% 8% 17%; /*creamos columnas (divs) y le decimos cuanto ocupara cada una*/
+    grid-template-columns: 24% 27% 27% 22%; /*creamos columnas (divs) y le decimos cuanto ocupara cada una*/
 }
 .fila-item{
     flex: 1; /*para que los items (cada div) se expandan y ocupen todo el espacio disponible*/
 }
-.fila:hover{ /*cambia de color cuando pasa el cursor (no se nombra en el div, solo aqui en css)*/
+.fila-index:hover{ /*cambia de color cuando pasa el cursor (no se nombra en el div, solo aqui en css)*/
     background-color: #9995;
-}
-/*si el placeholder NO esta siendo mostrado
-obtenemos las variables bg y text*/
-form:has(:placeholder-shown){
-    --bg: #e449;
-    --text: '¡No has escrito nada aún!';
-}
-/*estas variables sin aplicadas despues, como un after*/
-.mensaje::after{
-    content: var(--text);
-    background-color: var(--bg);
-    padding: 3px 5px;
-    box-shadow: 0px 0px 8px #e44;
-}
-
-.contenido-fechas{
-    display: none;
 }

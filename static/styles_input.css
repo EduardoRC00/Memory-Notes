@@ -19,14 +19,26 @@ input:focus{
     box-shadow: 0px 0px 6px #e00;
 }
 .add-ingles,
-.add-espanol{
+.add-espanol,
+.edit-ingles,
+.edit-espanol{
     margin: 8px 0px;
 }
 .btn-agregar,
 .btn-actualizar{
     margin-top: 16px;
 }
-.edit-ingles,
-.edit-espanol{
-    margin: 8px 0px;
+
+/*si el placeholder NO esta siendo mostrado
+obtenemos las variables bg y text*/
+form:has(:placeholder-shown){
+    --bg: #e449;
+    --text: '¡No has escrito nada aún!';
+}
+/*estas variables sin aplicadas despues, como un after*/
+.mensaje::after{
+    content: var(--text);
+    background-color: var(--bg);
+    padding: 3px 5px;
+    box-shadow: 0px 0px 8px #e44;
 }
