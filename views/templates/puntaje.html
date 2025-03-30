@@ -3,7 +3,15 @@
 
 {% block content %}
     <h2>Puntaje</h2>
-    {{puntaje}}
-    <a href="{{ url_for('inicio') }}">Inicio</a>
-    <a href="{{ url_for('nota_aleatoria') }}">Regresar</a>
+        <div class="puntaje">
+            {{puntaje}}
+        </div>
+        <div class="respuestas">
+            <h3>Respuestas correctas</h3>
+            {% for nota_ing, nota_esp in respuestas %}
+                <div class="respuesta">{{ nota_ing }} >> {{ nota_esp }} </div>
+            {% endfor %}
+        </div>
+    <a href="{{ url_for('inicio') }}" class="regresar">Inicio</a>
+    <a href="{{ url_for('nota_aleatoria') }}" class="regresar">Regresar</a>
 {% endblock %}

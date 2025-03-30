@@ -38,6 +38,9 @@
 .fila-fecha{
     flex: 1; /*para que los items (cada div) se expandan y ocupen todo el espacio disponible*/
 }
+.fila-fechas:hover{
+    background-color: #9995;
+}
 .fecha{
     font-size: large;
     font-weight: bold;

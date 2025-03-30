@@ -4,7 +4,7 @@
 {% block content %}
     <h1>Agregar nueva nota</h1>
     <div class="formulario">
-        <form action="{{url_for('agregar_nota')}}" method="post">
+        <form action="{{url_for('agregar_nota')}}" method="post" autocomplete="off">
             <div class="add-ingles"><label for="ingles">Nota en ingles</label></div>
             <div class="add-ingles"><input type="text" name="ingles" id="ingles" required></div>
             
@@ -15,5 +15,5 @@
         </form>
     </div>
     <hr>
-    <a href="{{url_for('inicio')}}">Regresar</a>
+    <a href="{{url_for('inicio')}}" class="regresar">Regresar</a>
 {% endblock %}

@@ -4,15 +4,16 @@
 {% block content %}
     <h1>Repaso</h1>
     <div class="formulario">
-        <form action="{{nota_aleatoria}}" method="post">
+        <form action="{{nota_aleatoria}}" method="post" autocomplete="off">
             {% for nota in aleatorio %}
                 <p>¿Cuál es la traducción de "{{nota.ingles}}"?: </p>
                 <label for="respuesta">Respuesta</label>
                 <input type="text" name="respuesta" id="respuesta" required>
-                <input type="hidden" name="correcta" value="{{nota.espanol}}"> {#guardando respuestas en un contenedor que no se ve porque si se recarga la pagina se pierden las respuestas#}
+                <input type="hidden" name="espanol" value="{{nota.espanol}}"> {#guardando respuestas en un contenedor que no se ve porque si se recarga la pagina se pierden las respuestas#}
+                <input type="hidden" name="ingles" value="{{nota.ingles}}">
             {% endfor %}
             <button type="submit" id="respuesta">Enviar</button>
         </form>
     </div>
-    <a href="{{url_for('inicio')}}">Regresar</a>
+    <a href="{{url_for('inicio')}}" class="regresar">Regresar</a>
 {% endblock %}

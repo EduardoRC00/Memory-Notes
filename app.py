@@ -26,17 +26,16 @@ def nota_aleatoria():
         notas = [d.obtener_nota_aleatoria() for _ in range(5)] #generando 5 notas
         if request.method == 'POST':
             puntaje = 0
+            ingles = request.form.getlist('ingles')
             respuestas = request.form.getlist('respuesta')
-            correctas = request.form.getlist('correcta') #obteniendo las respuestas correctas que el usuario no ve
-            print(respuestas,'\n',correctas)
-            for i in range(len(correctas)):
-                if respuestas[i] == correctas[i]: #comparando por indice
+            espanol = request.form.getlist('espanol') #obteniendo las respuestas correctas que el usuario no ve
+            for i in range(len(espanol)):
+                if respuestas[i] == espanol[i]: #comparando por indice
                     puntaje += 1
-            return render_template('puntaje.html', puntaje = puntaje)
+            return render_template('puntaje.html', puntaje = puntaje, respuestas = zip(ingles, espanol))
         else:
-
             return render_template('nota_aleatoria.html', aleatorio = notas)
-    return render_template('nota_aleatoria.html', mensaje = "")
+    return render_template('nota_aleatoria.html')
 
 @app.route('/eliminar-nota/<string:id>', methods=['GET', 'POST'])
 def eliminar_nota(id):
