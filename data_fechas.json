@@ -23,7 +23,7 @@
             },
             {
                 "id": "81c3c44f-31b7-4835-a743-653d6fad661b",
-                "ingles": "okay",
+                "ingles": "okey",
                 "espanol": "esta bien",
                 "fecha": "2025-03-21"
             }
@@ -76,6 +76,20 @@
                 "ingles": "such as life",
                 "espanol": "asi es la vida",
                 "fecha": "2025-03-30"
+            }
+        ],
+        "2025-04-02": [
+            {
+                "id": "164a9ba4-ef4a-49df-a739-de4426ce7d8f",
+                "ingles": "btw",
+                "espanol": "por cierto",
+                "fecha": "2025-04-02"
+            },
+            {
+                "id": "196fbf17-2d93-4d94-9eb2-e93015c22672",
+                "ingles": "h",
+                "espanol": "h",
+                "fecha": "2025-04-02"
             }
         ]
     }

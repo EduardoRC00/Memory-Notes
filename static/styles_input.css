@@ -1,5 +1,5 @@
 .formulario{
-    background-color: #d4efdf;
+    background-color: #e2f8ecb9;
     border: none black 2px;
     margin: 30px;
     padding: 20px 20px;
@@ -7,7 +7,7 @@
     box-shadow: 0px 0px 8px #0006;
 }
 input{
-    border: solid #22c7 2px;
+    border: solid rgba(1, 75, 104, 0.678) 2px;
     border-radius: 8px;
     /*outline none quita el contorno del input al clicar*/
     outline: none; 
@@ -15,8 +15,8 @@ input{
     transition: all 0.3s ease-in-out;
 }
 input:focus{
-    border-color: #e065;
-    box-shadow: 0px 0px 6px #e00;
+    border-color: rgba(230, 218, 231, 0.438);
+    box-shadow: 0px 0px 6px rgb(179, 169, 170);
 }
 .add-ingles,
 .add-espanol,
@@ -32,7 +32,7 @@ input:focus{
 /*si el placeholder NO esta siendo mostrado
 obtenemos las variables bg y text*/
 form:has(:placeholder-shown){
-    --bg: #e449;
+    --bg: rgba(250, 36, 36, 0.842);
     --text: '¡No has escrito nada aún!';
 }
 /*estas variables sin aplicadas despues, como un after*/
@@ -40,5 +40,5 @@ form:has(:placeholder-shown){
     content: var(--text);
     background-color: var(--bg);
     padding: 3px 5px;
-    box-shadow: 0px 0px 8px #e44;
+    box-shadow: 0px 0px 8px rgb(195, 172, 202);
 }
